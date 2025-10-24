@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zudio Franchise - Join India's Leading Fashion Brand</title>
+    <meta name="description"
+        content="Apply for a Zudio franchise. Low investment, high returns — backed by Trent (Tata Group).">
+    <style>
+        :root {
+            --primary: #000;
+            --secondary: #333;
+            --accent: #666;
+            --light: #fff;
+            --light-gray: #f8f9fa;
+            --medium-gray: #e9ecef;
+            --text: #212529;
+            --text-muted: #6c757d;
+            --border: #dee2e6;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --shadow-lg: rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .bg-pattern {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: white;
+            opacity: 0.95;
+            background-image: radial-gradient(circle at 25% 25%, rgba(0, 0, 0, 0.03) 0%, transparent 55%), radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.03) 0%, transparent 55%);
+            background-size: 50px 50px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            transition: all 0.25s ease;
+        }
+
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        nav.container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            padding: 0.5rem 0;
+            position: relative;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.25s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .top-form-section {
+            padding: 140px 0 80px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .top-form-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .form-intro h1 {
+            font-family: 'Arial Black', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+
+        .form-intro p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .quick-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .quick-form h3 {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            text-transform: uppercase;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid rgba(0, 0, 0, 0.08);
+            font-size: 1rem;
+            background: var(--light);
+            border-radius: 8px;
+            transition: border-color 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-secondary {
+            padding: 1rem 2rem;
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-family: 'Arial Black', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .info-section {
+            padding: 80px 0;
+            background: var(--light);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: var(--light);
+            padding: 2rem;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .info-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .info-card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .about-section {
+            padding: 80px 0;
+            background: var(--light-gray);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image {
+            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+            height: 400px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .process-section {
+            padding: 80px 0;
+            background: var(--light);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .process-step h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .gallery-section {
+            padding: 80px 0;
+            background: var(--light-gray);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+            height: 300px;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            color: var(--light);
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 0.8rem 1.2rem;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .gallery-caption h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            text-transform: uppercase;
+        }
+
+        .gallery-caption p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .contact-section {
+            padding: 80px 0;
+            background: var(--light);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            text-transform: uppercase;
+        }
+
+        .contact-item {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item h4 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .contact-item p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        .contact-form {
+            background: var(--light-gray);
+            padding: 2.5rem;
+            border-radius: 12px;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.9;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideUp 0.3s ease;
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 1.5rem;
+            top: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--text-muted);
+            cursor: pointer;
+            border: none;
+            background: none;
+            line-height: 1;
+            transition: color 0.3s;
+        }
+
+        .close-modal:hover {
+            color: var(--primary);
+        }
+
+        .payment-header {
+            margin-bottom: 2rem;
+        }
+
+        .payment-header h2 {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .payment-amount {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+
+        .payment-info {
+            background: var(--light-gray);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .payment-info p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .alert {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .alert-info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .instamojo-payment {
+            text-align: center;
+            padding: 2rem;
+            background: var(--light-gray);
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .instamojo-logo {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #ff5a5f;
+        }
+
+        .instamojo-payment h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .instamojo-payment p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .payment-status {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .payment-status.success {
+            background: #d4edda;
+            color: #155724;
+            border-radius: 8px;
+        }
+
+        .payment-status.failed {
+            background: #f8d7da;
+            color: #721c24;
+            border-radius: 8px;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.7s ease;
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+            margin-left: 10px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (max-width: 900px) {
+
+            .top-form-container,
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 1.5rem;
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .form-intro h1 {
+                font-size: 2.5rem;
+            }
+
+            .modal-content {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-pattern"></div>
+
+    <header id="header">
+        <nav class="container">
+            <div class="logo">ZUDIO</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#top">Home</a></li>
+                <li><a href="#info">Information</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="mobileMenu" class="mobile-menu">☰</button>
+        </nav>
+    </header>
+
+    <section id="top" class="top-form-section">
+        <div class="top-form-container">
+            <div class="form-intro fade-in">
+                <h1>Start Your Zudio Franchise Journey</h1>
+                <p>Join India's fastest-growing affordable fashion retail brand. With over 300+ successful stores and
+                    the trusted backing of Tata Group, Zudio offers a proven business model with exceptional returns.
+                </p>
+                <p><strong>Why Choose Zudio?</strong></p>
+                <p>✓ Low investment with high ROI<br>✓ Comprehensive training & support<br>✓ Centralized supply
+                    chain<br>✓ Established brand trust</p>
+                <a href="#about" class="btn-secondary">Know More About Us</a>
+            </div>
+            <div class="quick-form fade-in">
+                <h3>Quick Enquiry Form</h3>
+                <form id="topForm">
+                    <div class="form-group">
+                        <label for="topName">Full Name *</label>
+                        <input type="text" id="topName" required placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="topEmail">Email *</label>
+                        <input type="email" id="topEmail" required placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="topPhone">Phone Number *</label>
+                        <input type="tel" id="topPhone" required placeholder="+91 9XXXXXXXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="topCity">City *</label>
+                        <input type="text" id="topCity" required placeholder="Your city">
+                    </div>
+                    <div class="form-group">
+                        <label for="topAmount">Registration Fee *</label>
+                        <select id="topAmount" required>
+                            <option value="">Select Package</option>
+                            <option value="5000">₹5,000 - Basic Registration</option>
+                            <option value="10000">₹10,000 - Premium Registration</option>
+                            <option value="25000">₹25,000 - Express Processing</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">Proceed to Payment</button>
+                </form>
+                <div id="topFormResult" style="margin-top:1rem;font-weight:600;display:none;text-align:center"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="info" class="info-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Why Zudio Franchise?</h2>
+            <div class="info-grid">
+                <div class="info-card fade-in">
+                    <div class="info-icon">💼</div>
+                    <h3>Proven Business Model</h3>
+                    <p>Zudio's business model is engineered for low operating costs and high inventory turnover, making
+                        it a favorable combination for franchisees with consistent profitability.</p>
+                </div>
+                <div class="info-card fade-in">
+                    <div class="info-icon">💰</div>
+                    <h3>Investment Range</h3>
+                    <p>Initial investment ranges from ₹20-60 lakhs depending on store format. With high footfall and
+                        optimized operations, many partners achieve payback within 24-48 months.</p>
+                </div>
+                <div class="info-card fade-in">
+                    <div class="info-icon">🏢</div>
+                    <h3>Tata Group Backing</h3>
+                    <p>Zudio is part of Trent Ltd., under the Tata Group umbrella. This brings unmatched trust, scale,
+                        and retail excellence to help franchisees succeed.</p>
+                </div>
+                <div class="info-card fade-in">
+                    <div class="info-icon">📈</div>
+                    <h3>Market Leadership</h3>
+                    <p>With 300+ stores and 50M+ annual footfalls, Zudio dominates India's affordable fashion segment
+                        with proven customer loyalty and brand recognition.</p>
+                </div>
+                <div class="info-card fade-in">
+                    <div class="info-icon">🎯</div>
+                    <h3>Complete Support</h3>
+                    <p>From site selection to store launch and beyond, receive comprehensive training, marketing
+                        support, and operational guidance at every step.</p>
+                </div>
+                <div class="info-card fade-in">
+                    <div class="info-icon">🛍️</div>
+                    <h3>Product Range</h3>
+                    <p>15,000+ SKUs across men's, women's, kids' fashion, footwear, accessories, and home essentials -
+                        all at affordable price points.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h2>About Zudio</h2>
+                    <p>Zudio is India's leading affordable fashion retail brand, offering contemporary designs at
+                        wallet-friendly prices. Part of Trent Ltd. (Tata Group), Zudio has revolutionized the fashion
+                        retail landscape by making trendy clothing accessible to millions of Indians.</p>
+                    <p>Our stores offer a complete fashion solution - from casual wear and ethnic collections to
+                        footwear and home essentials. With a focus on quality, affordability, and style, Zudio has
+                        become the preferred destination for value-conscious shoppers across the country.</p>
+                    <p><strong>Our Mission:</strong> To democratize fashion by offering the latest trends at prices that
+                        every Indian can afford, while maintaining uncompromising quality standards.</p>
+                    <a href="#contact" class="btn-primary"
+                        style="display:inline-block;width:auto;margin-top:1rem">Contact Us Today</a>
+                </div>
+                <div class="about-image fade-in">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop"
+                        alt="Zudio Store Interior">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="process-section">
+        <div class="container">
+            <h2 class="section-title fade-in">How to Get Zudio Franchise</h2>
+            <div class="process-steps">
+                <div class="process-step fade-in">
+                    <div class="step-number">1</div>
+                    <h3>Submit Enquiry</h3>
+                    <p>Fill out the enquiry form with your details, location preferences, and investment capacity. Our
+                        team will review your application.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">2</div>
+                    <h3>Initial Assessment</h3>
+                    <p>We conduct a preliminary assessment of your background, financial capability, and proposed
+                        location viability.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">3</div>
+                    <h3>Site Selection</h3>
+                    <p>Our experts assist in selecting the optimal location with high footfall potential and provide
+                        store layout guidelines.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">4</div>
+                    <h3>Agreement & Training</h3>
+                    <p>Sign the franchise agreement and participate in comprehensive training covering operations,
+                        merchandising, and management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Recently Opened Stores</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=800&h=600&fit=crop"
+                        alt="Zudio Store Mumbai">
+                    <div class="gallery-caption">
+                        <h4>Mumbai - Andheri</h4>
+                        <p>2,000 sq.ft flagship store</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800&h=600&fit=crop"
+                        alt="Zudio Store Bangalore">
+                    <div class="gallery-caption">
+                        <h4>Bangalore - Koramangala</h4>
+                        <p>Premium mall location</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+<img src="https://images.unsplash.com/photo-1574180566232-aaad1b5b8450?w=800&h=600&fit=crop" alt="Zudio Store Delhi">                    <div class="gallery-caption">
+                        <h4>Delhi - Saket</h4>
+                        <p>High street retail</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info fade-in">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-item">
+                        <h4>Franchise Department</h4>
+                        <p>Email: franchise@zudio.com</p>
+                        <p>Phone: +91 22 6619 7000</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Corporate Office</h4>
+                        <p>Trent Ltd. (Zudio Division)</p>
+                        <p>Bombay House, 24 Homi Mody Street,</p>
+                        <p>Mumbai - 400001, Maharashtra, India</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Business Hours</h4>
+                        <p>Monday - Friday: 10:00 AM - 6:00 PM</p>
+                        <p>Saturday: 10:00 AM - 2:00 PM</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                </div>
+                <div class="contact-form fade-in">
+                    <h3>Send Your Details</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Full Name *</label>
+                            <input type="text" id="contactName" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email *</label>
+                            <input type="email" id="contactEmail" required placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Phone *</label>
+                            <input type="tel" id="contactPhone" required placeholder="+91 9XXXXXXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactCity">Preferred City *</label>
+                            <input type="text" id="contactCity" required placeholder="City for store">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactInvestment">Investment Capacity</label>
+                            <select id="contactInvestment">
+                                <option value="">Select range</option>
+                                <option value="20-30">₹20-30 Lakhs</option>
+                                <option value="30-50">₹30-50 Lakhs</option>
+                                <option value="50+">₹50+ Lakhs</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" placeholder="Tell us about your plans..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Submit Application</button>
+                    </form>
+                    <div id="contactFormResult" style="margin-top:1rem;font-weight:600;display:none;text-align:center">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" id="closePaymentModal">&times;</button>
+            <div class="payment-header">
+                <h2>Complete Your Payment</h2>
+                <p style="color: var(--text-muted); margin-top: 0.5rem;">Secure payment processing</p>
+            </div>
+    
+            <div id="paymentAlert"></div>
+    
+            <div class="payment-info">
+                <p><strong>Order ID:</strong> <span id="paymentOrderId">-</span></p>
+                <p><strong>Amount:</strong> ₹<span id="paymentAmount">0</span></p>
+                <p><strong>Status:</strong> <span id="paymentStatus">Initializing...</span></p>
+            </div>
+    
+            <div class="instamojo-payment">
+                <div class="instamojo-logo">💰</div>
+                <h3>Payment Processing</h3>
+                <p>Your payment is being processed securely.</p>
+                <div class="payment-amount" id="paymentDisplayAmount">₹0</div>
+                <button class="btn-primary" id="simulatePayment">Simulate Payment Success</button>
+            </div>
+    
+            <div class="action-buttons">
+                <button class="btn-secondary" id="cancelPayment">Cancel Payment</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Payment Status Modal -->
+    <div id="paymentStatusModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeStatusModal">&times;</button>
+            <div class="payment-status" id="paymentStatusContent">
+                <!-- Payment status will be displayed here -->
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p style="margin-bottom:0.5rem;font-weight:600">Zudio Franchise — Expression of Interest</p>
+            <p style="opacity:0.9;font-size:0.95rem">This page is for informational purposes only. Final franchise terms
+                and availability are subject to the franchisor's approval.</p>
+            <p style="margin-top:1rem;opacity:0.8;font-size:0.9rem">© 2025 Zudio (Trent Ltd.). Part of the Tata Group.
+                All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        (function () {
+            // ============= CONFIGURATION =============
+            const CONFIG = {
+                apiEndpoint: 'http://localhost:3000'
+            };
+
+            // ============= DOM ELEMENTS =============
+            const mobileBtn = document.getElementById('mobileMenu');
+            const navLinks = document.getElementById('navLinks');
+            const header = document.getElementById('header');
+            const fadeEls = document.querySelectorAll('.fade-in');
+            const topForm = document.getElementById('topForm');
+            const contactForm = document.getElementById('contactForm');
+            const topFormResult = document.getElementById('topFormResult');
+            const contactFormResult = document.getElementById('contactFormResult');
+            const paymentModal = document.getElementById('paymentModal');
+            const closePaymentModalBtn = document.getElementById('closePaymentModal');
+            const paymentAlert = document.getElementById('paymentAlert');
+            const paymentStatusModal = document.getElementById('paymentStatusModal');
+            const closeStatusModalBtn = document.getElementById('closeStatusModal');
+            const paymentStatusContent = document.getElementById('paymentStatusContent');
+
+            let currentPaymentData = {};
+            let currentOrderId = '';
+
+            // ============= MOBILE MENU =============
+            mobileBtn.addEventListener('click', function () {
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', String(!expanded));
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(a => {
+                a.addEventListener('click', () => {
+                    if (window.innerWidth <= 900) {
+                        navLinks.style.display = 'none';
+                        mobileBtn.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+
+            // ============= HEADER SCROLL EFFECT =============
+            function onScrollHeader() {
+                if (window.scrollY > 40) header.classList.add('scrolled');
+                else header.classList.remove('scrolled');
+            }
+            window.addEventListener('scroll', onScrollHeader);
+            onScrollHeader();
+
+            // ============= FADE-IN ANIMATION =============
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+            fadeEls.forEach(el => io.observe(el));
+
+            // ============= PAYMENT FLOW FUNCTIONS =============
+            async function initiatePayment() {
+                const amount = currentPaymentData.amount;
+                const packageText = document.getElementById('topAmount').selectedOptions[0].text;
+
+                const paymentData = {
+                    amount: parseInt(amount),
+                    purpose: `Zudio Franchise Registration - ${packageText}`
+                };
+
+                const customerData = {
+                    name: currentPaymentData.name,
+                    email: currentPaymentData.email,
+                    phone: currentPaymentData.phone,
+                    city: currentPaymentData.city,
+                    packageType: packageText,
+                    amount: parseInt(amount)
+                };
+
+                try {
+                    showPaymentAlert('Creating payment request...', 'info');
+                    document.getElementById('paymentStatus').textContent = 'Creating payment...';
+
+                    const response = await fetch(`${CONFIG.apiEndpoint}/api/create-payment`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            paymentData,
+                            customerData
+                        })
+                    });
+
+                    const result = await response.json();
+                    console.log('Payment creation response:', result);
+
+                    if (response.ok && result.success) {
+                        currentOrderId = result.data.orderId;
+
+                        document.getElementById('paymentOrderId').textContent = currentOrderId;
+                        document.getElementById('paymentAmount').textContent = amount;
+                        document.getElementById('paymentDisplayAmount').textContent = `₹${amount}`;
+                        document.getElementById('paymentStatus').textContent = 'Ready for payment';
+
+                        showPaymentAlert('✅ Payment initialized! Click "Simulate Payment Success" to complete payment.', 'success');
+                        console.log('✅ Payment request created:', currentOrderId);
+                    } else {
+                        throw new Error(result.message || 'Failed to initialize payment');
+                    }
+                } catch (error) {
+                    console.error('Payment initialization error:', error);
+                    showPaymentAlert(`❌ Error: ${error.message}`, 'error');
+                    document.getElementById('paymentStatus').textContent = 'Error initializing';
+                }
+            }
+
+            // ============= SIMULATE PAYMENT =============
+            document.getElementById('simulatePayment').addEventListener('click', async function () {
+                if (!currentOrderId) {
+                    showPaymentAlert('❌ Order ID not found', 'error');
+                    return;
+                }
+
+                this.disabled = true;
+                this.innerHTML = 'Processing... <span class="loading-spinner"></span>';
+
+                try {
+                    showPaymentAlert('Processing payment...', 'info');
+
+                    const response = await fetch(`${CONFIG.apiEndpoint}/api/confirm-payment`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            orderId: currentOrderId
+                        })
+                    });
+
+                    const result = await response.json();
+                    console.log('Payment confirmation response:', result);
+
+                    if (response.ok && result.success) {
+                        console.log('✅ Payment confirmed:', result);
+                        handlePaymentSuccess(currentOrderId);
+                    } else {
+                        throw new Error(result.message || 'Payment confirmation failed');
+                    }
+                } catch (error) {
+                    console.error('Payment confirmation error:', error);
+                    showPaymentAlert(`❌ Error: ${error.message}`, 'error');
+                    this.disabled = false;
+                    this.innerHTML = 'Simulate Payment Success';
+                }
+            });
+
+            // ============= PAYMENT SUCCESS HANDLER =============
+            function handlePaymentSuccess(orderId) {
+                closePaymentModal();
+
+                paymentStatusContent.className = 'payment-status success';
+                paymentStatusContent.innerHTML = `
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">✓ Payment Successful!</h3>
+                        <p style="font-size: 1.05rem; margin-bottom: 0.5rem;">Thank you for your payment. Your Zudio franchise registration has been received.</p>
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; text-align: left;">
+                            <p style="margin-bottom: 0.8rem;"><strong>Order ID:</strong> ${orderId}</p>
+                            <p style="margin-bottom: 0.8rem;"><strong>Amount:</strong> ₹${currentPaymentData.amount}</p>
+                            <p style="margin-bottom: 0.8rem;"><strong>Date:</strong> ${new Date().toLocaleDateString('en-IN')}</p>
+                            <p style="margin-bottom: 0;"><strong>Status:</strong> <span style="color: green; font-weight: bold;">COMPLETED</span></p>
+                        </div>
+                        <p style="color: #666; margin-bottom: 1rem;">Our team will contact you within 24 hours.</p>
+                        <button class="btn-primary" onclick="window.closePaymentStatusModal()" style="margin-top: 1rem; width: 100%;">Close</button>
+                    `;
+
+                paymentStatusModal.classList.add('active');
+
+                topFormResult.style.display = 'block';
+                topFormResult.style.color = 'green';
+                topFormResult.innerHTML = `<strong>✓ Payment Successful!</strong><br>Order ID: ${orderId}<br>Confirmation email sent!`;
+
+                setTimeout(() => {
+                    topFormResult.style.display = 'none';
+                    topForm.reset();
+                }, 10000);
+            }
+
+            // ============= MODAL FUNCTIONS =============
+            function openPaymentModal(formData) {
+                currentPaymentData = formData;
+                paymentModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                initiatePayment();
+            }
+
+            function closePaymentModal() {
+                paymentModal.classList.remove('active');
+                document.body.style.overflow = '';
+                hidePaymentAlert();
+            }
+
+            window.closePaymentStatusModal = function () {
+                paymentStatusModal.classList.remove('active');
+                document.body.style.overflow = '';
+            };
+
+            // ============= ALERT FUNCTIONS =============
+            function showPaymentAlert(message, type = 'info') {
+                paymentAlert.className = `alert alert-${type}`;
+                paymentAlert.innerHTML = message;
+                paymentAlert.style.display = 'block';
+            }
+
+            function hidePaymentAlert() {
+                paymentAlert.style.display = 'none';
+            }
+
+            // ============= EVENT LISTENERS =============
+            closePaymentModalBtn.addEventListener('click', closePaymentModal);
+            paymentModal.addEventListener('click', function (e) {
+                if (e.target === paymentModal) closePaymentModal();
+            });
+
+            closeStatusModalBtn.addEventListener('click', window.closePaymentStatusModal);
+            paymentStatusModal.addEventListener('click', function (e) {
+                if (e.target === paymentStatusModal) window.closePaymentStatusModal();
+            });
+
+            document.getElementById('cancelPayment').addEventListener('click', closePaymentModal);
+
+            // ============= TOP FORM (PAYMENT) =============
+            topForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+
+                const amount = document.getElementById('topAmount').value;
+                if (!amount) {
+                    alert('Please select a registration package');
+                    return;
+                }
+
+                const formData = {
+                    name: document.getElementById('topName').value,
+                    email: document.getElementById('topEmail').value,
+                    phone: document.getElementById('topPhone').value,
+                    city: document.getElementById('topCity').value,
+                    amount: amount
+                };
+
+                if (!formData.name || !formData.email || !formData.phone || !formData.city) {
+                    alert('Please fill all required fields');
+                    return;
+                }
+
+                openPaymentModal(formData);
+            });
+
+            // ============= CONTACT FORM (ENQUIRY) =============
+            contactForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = 'Submitting... <span class="loading-spinner"></span>';
+
+                const enquiryData = {
+                    name: document.getElementById('contactName').value,
+                    email: document.getElementById('contactEmail').value,
+                    phone: document.getElementById('contactPhone').value,
+                    city: document.getElementById('contactCity').value,
+                    investment: document.getElementById('contactInvestment').value,
+                    message: document.getElementById('contactMessage').value
+                };
+
+                try {
+                    const response = await fetch(`${CONFIG.apiEndpoint}/api/send-notification`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            type: 'enquiry',
+                            data: enquiryData
+                        })
+                    });
+
+                    const result = await response.json();
+
+                    if (response.ok && result.success) {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalText;
+                        contactFormResult.style.display = 'block';
+                        contactFormResult.style.color = 'green';
+                        contactFormResult.innerHTML = '✓ Application received! Our franchise team will contact you soon.';
+                        contactForm.reset();
+
+                        setTimeout(() => {
+                            contactFormResult.style.display = 'none';
+                        }, 8000);
+                    } else {
+                        throw new Error(result.message || 'Failed to submit');
+                    }
+                } catch (error) {
+                    console.error('Failed to send enquiry:', error);
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+                    contactFormResult.style.display = 'block';
+                    contactFormResult.style.color = 'red';
+                    contactFormResult.innerHTML = '✗ Failed to submit. Please try again.';
+
+                    setTimeout(() => {
+                        contactFormResult.style.display = 'none';
+                    }, 5000);
+                }
+            });
+
+            // ============= RESPONSIVE MENU =============
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 900) {
+                    navLinks.style.display = 'flex';
+                    mobileBtn.setAttribute('aria-expanded', 'false');
+                } else {
+                    navLinks.style.display = 'none';
+                }
+            });
+
+            if (window.innerWidth <= 900) {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+            }
+
+        })();
+    </script>
+    </body>
+    
+    </html>
